@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
         protected void onPreExecute(Menu menu)
         {
-        super.onPreExecute();
-        showNewsDataView.setVisibility(View.VISIBLE);
+            super.onPreExecute();
+            showNewsDataView.setVisibility(View.VISIBLE);
         }
 
 

@@ -27,7 +27,7 @@ public class NetworkUtils {
     private static final String source = "the-next-web";
     private static final String sortby_param = "source";
     private static final String sortBy = "latest";
-   // private static final String apiKey =
+    // private static final String apiKey =
     private static final String api_key_param = "apiKey";
     private static final String apiKey = "d35d9f873a5f4338a096b89a9b6cc403";
 
@@ -66,7 +66,7 @@ public class NetworkUtils {
         }
 
 
-             finally {
+        finally {
             urlConnection.disconnect();
         }
     }
