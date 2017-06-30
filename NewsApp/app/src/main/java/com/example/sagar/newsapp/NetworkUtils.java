@@ -6,11 +6,15 @@ package com.example.sagar.newsapp;
 import android.net.Uri;
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -70,6 +74,26 @@ public class NetworkUtils {
             urlConnection.disconnect();
         }
     }
+    public static ArrayList<NewsItem> parseJSON(String json) throws JSONException{
 
+        ArrayList<NewsItem> newsList = new ArrayList<NewsItem>();
+        JSONObject obj =new JSONObject(json);
+        JSONArray arr = obj.getJSONArray("articles");
+
+        for(int i=0; i< arr.length();i++)
+        {
+            JSONObject mobj = arr.getJSONObject(i);
+
+            String author = mobj.getString("author");
+            String description = mobj.getString("description");
+            String published = mobj.getString("publishedAt");
+            String title = mobj.getString("title");
+            String url = mobj.getString("url");
+            String urlToImg=mobj.getString("urlToImage");
+            NewsItem newsdata = new NewsItem(author, title,description, url, urlToImg, published);
+            newsList.add(newsdata);
+        }
+        return newsList;
+    }
 
 }

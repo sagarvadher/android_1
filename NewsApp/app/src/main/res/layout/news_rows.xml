@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+                    android:id="@+id/newsTitle"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+                    android:id="@+id/newsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:textSize="15sp"
+                    android:background="?android:attr/selectableItemBackground"/>
+
+    <TextView
+                    android:id="@+id/newsPublishedAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="15sp"
+                    android:layout_weight="0.01"
+                    android:background="?android:attr/selectableItemBackground"/>
+
+    </LinearLayout>
