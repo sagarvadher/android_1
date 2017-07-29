@@ -1,4 +1,4 @@
-package com.example.sagar.newsapp;
+package com.example.sagar.newsapp.Data;
 
 /**
  * Created by sagar on 6/25/17.
